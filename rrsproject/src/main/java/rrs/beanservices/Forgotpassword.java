@@ -36,8 +36,8 @@ public class Forgotpassword extends HttpServlet
 			{
 				if(l.getEmail().equals(recipient))
 				{
-					final String from="unr.638@gmail.com";
-					final String pass="smowqhctszlmzmgw";
+					final String from="";
+					final String pass="";
 					
 					Properties prop=System.getProperties();
 					
