@@ -1,2 +1,4 @@
 # Railway-Reservation-System
-This is just a simple working model of railway reservation system which is designed using HTML, CSS,JSP in frontend and Java, Servlet, JDBC in backend. 
+This is just a simple working model of railway reservation system which is designed using HTML, CSS, JSP in frontend and Java, Servlet, JDBC in backend. If anyone want to use it , then makes sure to give your email and temporary password of email in forgotpassword.java file of bean services and can run the RRShome.jsp file but to Start this one must have localhost and server in my case i have used PHPMyAdmin as localhost and you can use it too and for working platform i used the eclipse application and inbuilt server Tomcat apache v9.
+This is the project i have chosen for the Software Engineering lab and completed it to some extent.
+Something still lacking in this project that is back problem and i don't know how to use the session efficiently but even then i tried my best by gathering all the information from internet and implement in this project.
