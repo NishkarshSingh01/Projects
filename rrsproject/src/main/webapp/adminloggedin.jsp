@@ -167,8 +167,8 @@ else if(session.getAttribute("user")=="alogin")
      <center> <h2>Help</h2></center>
       <p>Jay Shree Krishna</p>
      <p>For any help assistance please give your queries through the contact share below.</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> &nbsp:&nbsp unr.638@gmail.com</p>
-      <p><span class="glyphicon glyphicon-phone-alt"></span>&nbsp:&nbsp  +91 8260979937</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> &nbsp:&nbsp xxx@gmail.com</p>
+      <p><span class="glyphicon glyphicon-phone-alt"></span>&nbsp:&nbsp  +91 xxx674</p>
     </div>
     <div class="modal-footer">
       <h3>Thank You</h3>
