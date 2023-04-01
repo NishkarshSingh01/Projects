@@ -27,7 +27,8 @@ public class Searchtrain extends HttpServlet
 		HttpSession session=req.getSession();
 		try
 		{
-			if( (req.getParameter("search")!=null &&req.getParameter("from")=="" )|| (req.getParameter("search")!=null && req.getParameter("to")=="") || (req.getParameter("search")!=null && req.getParameter("date")==""))
+			if( (req.getParameter("search")!=null &&req.getParameter("from")=="" )|| (req.getParameter("search")!=null && req.getParameter("to")=="") ||
+					(req.getParameter("search")!=null && req.getParameter("date")=="")|| (req.getParameter("search")!=null && req.getParameter("tno")==""))
 			{
 				JOptionPane.showMessageDialog(null, "Please fill respective field to search train","INFO",JOptionPane.INFORMATION_MESSAGE);
 				if(session.getAttribute("user")!=null && session.getAttribute("user").equals("User"))
@@ -50,13 +51,9 @@ public class Searchtrain extends HttpServlet
 			else if(req.getParameter("from")!=null && req.getParameter("to")!=null && req.getParameter("date")!=null)
 			{
 				
-				String fromst=req.getParameter("from");
-				String tost=req.getParameter("to");
 				String date=req.getParameter("date");
 				session.setAttribute("jday", date);
 				
-				String classs=req.getParameter("class");
-				String category=req.getParameter("category");
 				
 				SimpleDateFormat f1=new SimpleDateFormat("yyyy-MM-dd");
 				java.util.Date date1=f1.parse(date);
