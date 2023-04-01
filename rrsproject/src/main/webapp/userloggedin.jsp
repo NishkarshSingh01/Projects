@@ -130,8 +130,9 @@ if(session.getAttribute("username")==null)
     <div class="modal-body">
       <center> <h2>About Us</h2></center>
       <p>Jay Shree Krishna</p>
-      <p>I am Udit Narayan Ray and I am a backend developer by using the language JAVA I make projects.</p>
-      <p>This is the result of this skill only.</p>
+     <p>I am Udit Narayan Ray and I am a backend developer and use JAVA to make projects.</p>
+      <p>This is just a simple working model of railway reservation system made by implementing jersey RESTful web services of maven project which is designed using HTML, CSS, JSP in frontend and Java, Servlet, JDBC in backend.</p>
+      <p>This is the project i have chosen for the Software Engineering lab and completed it to some extent.</p>
     </div>
     <div class="modal-footer">
       <h3>Thank You</h3>
@@ -153,8 +154,8 @@ if(session.getAttribute("username")==null)
     <center> <h2>Help</h2></center>
       <p>Jay Shree Krishna</p>
       <p>For any help assistance please give your queries through the contact share below.</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> &nbsp:&nbsp unr.638@gmail.com</p>
-      <p><span class="glyphicon glyphicon-phone-alt"></span>&nbsp:&nbsp  +91 8260979937</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> &nbsp:&nbsp xxx@gmail.com</p>
+      <p><span class="glyphicon glyphicon-phone-alt"></span>&nbsp:&nbsp  +91 xxx466</p>
     </div>
     <div class="modal-footer">
       <h3>Thank You</h3>
