@@ -42,7 +42,7 @@
 
 
 
-<h2>WELCOME </h3>
+<h2>WELCOME </h2>
 <h4>TO THE </h4>
 <h3>RAILWAY RESERVATION SYSTEM</h3>
 
@@ -56,30 +56,18 @@
     <h1 style="margin-left: 35%;">SEARCH</h1>
 
     &nbsp<span class="glyphicon glyphicon-send space"></span>:
-<input class="space btwn" type="text" name="from" placeholder="From" required>
+<input class="space btwn" type="text" name="from" placeholder="From" >
 <label class="space" >Date</label>:
-<input class="space" type="date" name="date" required>
+<input class="space" type="date" name="date" >
 
 <br>&nbsp<span class="glyphicon glyphicon-map-marker space"></span>:
-<input class="space btwn" type="text" name="to" placeholder="To" required>
+<input class="space btwn" type="text" name="to" placeholder="To" >
+<label class="space">Train no</label>:
+<input class="space" type="number" name="tno" placeholder="Train number" >
 
-<br>&nbsp<span class="glyphicon glyphicon-th-large space "></span>:&nbsp
-<select class="space bwtn" name="category" >
-<option value=""><b>Category</b></option>
-<option value="General">General</option>
-<option value="Tatkal">Tatkal</option>
-<option value="Ladies">Ladies</option>
-<option value="Old citizen">Old Citizen</option>
-</select>
-<span class="glyphicon glyphicon-briefcase space"></span>&nbsp:
-<select class="space" name="class" >
-<option value="">Classes</option>
-<option value="2S">2S</option>
-<option value="SL">SL</option>
-<option value="AC">AC</option>
-</select>
     
     <button type="submit" name="search" class="btn">SEARCH</button>
+    <button type="button" name="trainlist" class="btn" onclick="location.href='searchtrain.jsp'">All TRAIN LIST</button>
     <button type="button"  class="btn cancel" onclick="closeForm()">CLOSE</button>
   </form>
 </div>
