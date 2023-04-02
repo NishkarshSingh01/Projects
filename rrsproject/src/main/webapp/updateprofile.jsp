@@ -12,7 +12,18 @@
   
 	<link rel="stylesheet" href="css/updateprofile.css">
 <title>Update Profile</title>
-
+<%
+ response.setHeader("Cache-Control"," no-store, no-cache");
+ response.setHeader("Pragma","no-cache"); 
+	response.setDateHeader ("Expires", -1);
+ if(session.getAttribute("username")==null)
+ {
+	response.sendRedirect("index.jsp");
+		
+	/* RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
+	rd.forward(request, response); */
+ }
+%>
 </head>
 <body>
 
