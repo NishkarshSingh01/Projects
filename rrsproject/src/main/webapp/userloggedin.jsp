@@ -14,16 +14,16 @@
 
 <title>User Logged IN</title>
 <%
-
-if(session.getAttribute("username")==null)
-{
-	response.setHeader("Cache-Control"," no-store, no-cache,must-validate");
-	response.setHeader("Pragma","no-cache"); 
-	response.setDateHeader ("Expires", 0);
-	
-	RequestDispatcher rd=request.getRequestDispatcher("RRShome.jsp");
-	rd.forward(request, response);
-}
+ response.setHeader("Cache-Control"," no-store, no-cache");
+ response.setHeader("Pragma","no-cache"); 
+	response.setDateHeader ("Expires", -1);
+ if(session.getAttribute("username")==null)
+ {
+	response.sendRedirect("index.jsp");
+		
+	/* RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
+	rd.forward(request, response); */
+ }
 %>
 </head>
 <body background="white">
