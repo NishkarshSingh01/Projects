@@ -36,10 +36,10 @@ String day=request.getAttribute("day").toString();
 int trainno=Integer.parseInt(request.getParameter("tno"));
 for(modifytrainbean t:mt)
 {
-	if((t.getTrainno()==trainno && t.getFromst().equalsIgnoreCase(fromst) && t.getTost().equalsIgnoreCase(tost) && t.getMon().equals(day))||(t.getTrainno()==trainno && t.getFromst().equalsIgnoreCase(fromst) && t.getTost().equalsIgnoreCase(tost) && t.getTues().equals(day)) ||
-			(t.getTrainno()==trainno && t.getFromst().equalsIgnoreCase(fromst) && t.getTost().equalsIgnoreCase(tost) && t.getWed().equals(day)) ||(t.getTrainno()==trainno && t.getFromst().equalsIgnoreCase(fromst) && t.getTost().equalsIgnoreCase(tost) &&  t.getThur().equals(day))||
-			(t.getTrainno()==trainno && t.getFromst().equalsIgnoreCase(fromst) && t.getTost().equalsIgnoreCase(tost) && t.getFri().equals(day)) ||(t.getTrainno()==trainno && t.getFromst().equalsIgnoreCase(fromst) && t.getTost().equalsIgnoreCase(tost) && t.getSat().equals(day)) || 
-			(t.getTrainno()==trainno && t.getFromst().equalsIgnoreCase(fromst) && t.getTost().equalsIgnoreCase(tost) && t.getSun().equals(day)))
+	if((t.getTrainno()==trainno ||( t.getFromst().equalsIgnoreCase(fromst) && t.getTost().equalsIgnoreCase(tost) && t.getMon().equals(day)))||(t.getTrainno()==trainno ||( t.getFromst().equalsIgnoreCase(fromst) && t.getTost().equalsIgnoreCase(tost) && t.getTues().equals(day))) ||
+			(t.getTrainno()==trainno ||( t.getFromst().equalsIgnoreCase(fromst) && t.getTost().equalsIgnoreCase(tost) && t.getWed().equals(day))) || (t.getTrainno()==trainno ||( t.getFromst().equalsIgnoreCase(fromst) && t.getTost().equalsIgnoreCase(tost) &&  t.getThur().equals(day)))||
+			(t.getTrainno()==trainno ||( t.getFromst().equalsIgnoreCase(fromst) && t.getTost().equalsIgnoreCase(tost) && t.getFri().equals(day))) || (t.getTrainno()==trainno ||(t.getFromst().equalsIgnoreCase(fromst) && t.getTost().equalsIgnoreCase(tost) && t.getSat().equals(day)))|| 
+			(t.getTrainno()==trainno ||( t.getFromst().equalsIgnoreCase(fromst) && t.getTost().equalsIgnoreCase(tost) && t.getSun().equals(day))))
 		{
 		status=true;
 %>
@@ -52,6 +52,12 @@ for(modifytrainbean t:mt)
 <th>Distance</th><td><%=t.getDistance() %>&nbspKM</td><th>Arrival Time</th><td><%=t.getAt() %></td>
 <th>Depart Time</th><td><%=t.getDt() %></td><th>Journey Date</th><td><%= session.getAttribute("jday") %></td>
 </tr>
+<tr>
+<th>Running Days</th><%if(!t.getMon().equals("no")) {%><td>Monday</td><%} %>
+<%if(!t.getTues().equals("no")) {%><td>Tuesday</td><%} %> <%if(!t.getWed().equals("no")) {%><td>Wednesday</td><%} %>
+<%if(!t.getThur().equals("no")) {%><td>Thursday</td><%} %> <%if(!t.getFri().equals("no")) {%><td>Friday</td><%} %>
+<%if(!t.getSat().equals("no")) {%><td>Saturday</td><%} %> <%if(!t.getSun().equals("no")) {%><td>Sunday</td><%} %>
+</tr>	
 <%
 	}
 }
