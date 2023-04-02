@@ -11,7 +11,18 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
 <title>Train Search Result</title>
-
+<%
+ response.setHeader("Cache-Control"," no-store, no-cache");
+ response.setHeader("Pragma","no-cache"); 
+	response.setDateHeader ("Expires", -1);
+ if(session.getAttribute("username")==null)
+ {
+	response.sendRedirect("index.jsp");
+		
+	/* RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
+	rd.forward(request, response); */
+ }
+%>
 </head>
 <body>
 <h1 align="center">Train List</h1>
