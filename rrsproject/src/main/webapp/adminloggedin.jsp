@@ -13,32 +13,16 @@
 <link rel="stylesheet" href="css/loggedin.css">
 
 <title>Admin Logged IN</title>
-
 <%
-/* response.setHeader("Cache-Control"," no-store, no-cache,must-revalidate");
-response.setHeader("Pragma","no-cache"); 
-response.setDateHeader ("Expires", 0); */
-
-/* if(session.getAttribute("user")=="ulogin")
-{
-	request.getRequestDispatcher("userloggedin.jsp");
-}
-else if(session.getAttribute("user")=="alogin")
-{
-	request.getRequestDispatcher("adminloggedin.jsp");
-}
-	 */
-
-	
+ response.setHeader("Cache-Control"," no-store, no-cache");
+ response.setHeader("Pragma","no-cache"); 
+	response.setDateHeader ("Expires", -1);
  if(session.getAttribute("username")==null)
  {
-	 response.setHeader("Cache-Control"," no-store, no-cache,must-revalidate");
-		response.setHeader("Pragma","no-cache"); 
-		response.setDateHeader ("Expires", -1);
-	RequestDispatcher rd=request.getRequestDispatcher("RRShome.jsp");
-	rd.forward(request, response);
-	
-	 /*response.sendRedirect("RRShome.jsp");*/
+	response.sendRedirect("index.jsp");
+		
+	/* RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
+	rd.forward(request, response); */
  }
 %>
 </head>
