@@ -31,8 +31,9 @@ public class Login extends HttpServlet
 				{
 					for(loginbean l:g.getLogin())
 					{
+						String pass=DigestUtils.sha256Hex(req.getParameter("psw"));
 						if((l.getEmail().equals(req.getParameter("uname")) && session.getAttribute("otp")!=null && session.getAttribute("otp").toString().equals(req.getParameter("psw"))&& l.getUsertype().equals("User"))
-								||(l.getEmail().equals(req.getParameter("uname")) && l.getPassword().equals(req.getParameter("psw")) && l.getUsertype().equals("User")))
+								||(l.getEmail().equals(req.getParameter("uname")) && l.getPassword().equals(pass) && l.getUsertype().equals("User")))
 						{
 							
 							session.setAttribute("username",l.getName());
@@ -67,9 +68,9 @@ public class Login extends HttpServlet
 				{
 					for(loginbean l:g.getLogin())
 					{
-						
+						String pass=DigestUtils.sha256Hex(req.getParameter("psw"));
 						if((l.getEmail().equals(req.getParameter("uname")) && session.getAttribute("otp")!=null && session.getAttribute("otp").toString().equals(req.getParameter("psw")) && l.getUsertype().equals("Admin"))
-								||( l.getEmail().equals(req.getParameter("uname")) && l.getPassword().equals(req.getParameter("psw")) && l.getUsertype().equals("Admin")))
+								||( l.getEmail().equals(req.getParameter("uname")) && l.getPassword().equals(pass) && l.getUsertype().equals("Admin")))
 						{
 							session.setAttribute("username",l.getName());
 							session.setAttribute("email", l.getEmail());
@@ -77,6 +78,7 @@ public class Login extends HttpServlet
 							RequestDispatcher rd=req.getRequestDispatcher("adminloggedin.jsp");
 							rd.forward(req, res);
 						}	
+		
 					}
 				}
 				else
