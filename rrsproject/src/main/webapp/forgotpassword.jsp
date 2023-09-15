@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="css/forgotpassword.css">
 
 <title>Forgot Password</title>
-<%
+<%--<%
  response.setHeader("Cache-Control"," no-store, no-cache");
  response.setHeader("Pragma","no-cache"); 
 	response.setDateHeader ("Expires", -1);
@@ -24,7 +24,7 @@
 	/* RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
 	rd.forward(request, response); */
  }
-%>
+%>--%>
 </head>
 <body>
 
