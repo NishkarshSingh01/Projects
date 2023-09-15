@@ -37,8 +37,10 @@ public class Httprequestpostjson
 			con.setRequestProperty("Content-Type", contenttype);
 			con.setRequestProperty("Accept", contenttype);
 			con.setRequestProperty("User-Agent", useragent);
+			String pass=DigestUtils.sha256Hex(l.getPassword());
+			String cpass=DigestUtils.sha256Hex(l.getCpassword());
 			
-			String loginbody="{\"email\":\""+l.getEmail()+"\",\"name\":\""+l.getName()+"\",\"password\":\""+l.getPassword()+"\",\"cpassword\":\""+l.getCpassword()+"\",\"usertype\":\""+l.getUsertype()+"\"}";
+			String loginbody="{\"email\":\""+l.getEmail()+"\",\"name\":\""+l.getName()+"\",\"password\":\""+pass+"\",\"cpassword\":\""+cpass+"\",\"usertype\":\""+l.getUsertype()+"\"}";
 			
 			con.setDoOutput(true);
 			OutputStream os=con.getOutputStream();
