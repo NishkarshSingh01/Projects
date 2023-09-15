@@ -43,7 +43,7 @@
 
     <div class="container" style="background-color:#f1f1f1; margin-left: 0px;">
       <button type="button" name="back" class="cancelbtn" onclick="location.href='http://localhost:8081/rrsproject/RRShome.jsp'">Back</button>
-      <span class="psw"> If don't have account? <a href="forgotpassword.jsp">Forgot password</a></span>
+      <span class="psw"> If don't have account?<a href="register.jsp">SIGN UP</a> &nbsp|&nbsp <a href="forgotpassword.jsp">Forgot password</a></span>
     </div>
   </form>
 </div>
