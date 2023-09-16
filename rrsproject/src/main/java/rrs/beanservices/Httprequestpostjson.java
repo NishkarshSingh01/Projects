@@ -39,6 +39,9 @@ public class Httprequestpostjson
 			con.setRequestProperty("User-Agent", useragent);
 			String pass=DigestUtils.sha256Hex(l.getPassword());
 			String cpass=DigestUtils.sha256Hex(l.getCpassword());
+
+			//String pass=DigestUtils("SHA3-256").digestAsHex(l.getPassword());
+			//String cpass=DigestUtils("SHA3-256).digestAsHes(l.getCpassword());
 			
 			String loginbody="{\"email\":\""+l.getEmail()+"\",\"name\":\""+l.getName()+"\",\"password\":\""+pass+"\",\"cpassword\":\""+cpass+"\",\"usertype\":\""+l.getUsertype()+"\"}";
 			
