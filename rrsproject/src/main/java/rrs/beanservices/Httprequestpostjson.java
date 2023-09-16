@@ -40,8 +40,8 @@ public class Httprequestpostjson
 			String pass=DigestUtils.sha256Hex(l.getPassword());
 			String cpass=DigestUtils.sha256Hex(l.getCpassword());
 
-			//String pass=DigestUtils("SHA3-256").digestAsHex(l.getPassword());
-			//String cpass=DigestUtils("SHA3-256).digestAsHes(l.getCpassword());
+			//String pass= new DigestUtils("SHA3-256").digestAsHex(l.getPassword());
+			//String cpass=new DigestUtils("SHA3-256).digestAsHes(l.getCpassword());
 			
 			String loginbody="{\"email\":\""+l.getEmail()+"\",\"name\":\""+l.getName()+"\",\"password\":\""+pass+"\",\"cpassword\":\""+cpass+"\",\"usertype\":\""+l.getUsertype()+"\"}";
 			
