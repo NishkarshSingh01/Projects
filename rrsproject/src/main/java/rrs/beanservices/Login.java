@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import rrs.beans.loginbean;
 
 @WebServlet("/login")
@@ -31,7 +32,7 @@ public class Login extends HttpServlet
 				{
 					for(loginbean l:g.getLogin())
 					{
-						String pass=DigestUtils.sha256Hex(req.getParameter("psw"));
+						String pass= DigestUtils.sha256Hex(req.getParameter("psw"));
 						if((l.getEmail().equals(req.getParameter("uname")) && session.getAttribute("otp")!=null && session.getAttribute("otp").toString().equals(req.getParameter("psw"))&& l.getUsertype().equals("User"))
 								||(l.getEmail().equals(req.getParameter("uname")) && l.getPassword().equals(pass) && l.getUsertype().equals("User")))
 						{

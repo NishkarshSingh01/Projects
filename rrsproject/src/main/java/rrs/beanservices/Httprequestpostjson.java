@@ -10,6 +10,7 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -37,7 +38,7 @@ public class Httprequestpostjson
 			con.setRequestProperty("Content-Type", contenttype);
 			con.setRequestProperty("Accept", contenttype);
 			con.setRequestProperty("User-Agent", useragent);
-			String pass=DigestUtils.sha256Hex(l.getPassword());
+			String pass= DigestUtils.sha256Hex(l.getPassword());
 			String cpass=DigestUtils.sha256Hex(l.getCpassword());
 
 			//String pass= new DigestUtils("SHA3-256").digestAsHex(l.getPassword());
